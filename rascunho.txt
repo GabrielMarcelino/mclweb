@@ -1,0 +1,140 @@
+<?php
+                         if (isset($_POST['BTEnvia'])){
+ 
+	                     //REMETENTE --> ESTE EMAIL TEM QUE SER VALIDO DO DOMINIO
+ 	                     //====================================================
+	                     $email_remetente = "contato@mclweb.com.br"; // deve ser um email do dominio
+	                     //====================================================
+ 
+ 
+	                     //Configurações do email, ajustar conforme necessidade
+	                     //====================================================
+	                     $email_destinatario = "g.marcelino1996@gmail.com"; // qualquer email pode receber os dados
+	                     $email_reply = "$email";
+	                     $email_assunto = "Contato do Site - Via Formulário.";
+	                     //====================================================
+ 
+ 
+	                     //Variaveis de POST, Alterar somente se necessário
+	                     //====================================================
+	                     $nome = $_POST['nome'];
+	                     $email = $_POST['email'];
+	                     $telefone = $_POST['telefone'];
+ 	                     $ramo = $_POST['ramo'];
+                         
+                         $primeiro_a = $_POST['primeiro_a'];
+ 	                     $primeiro_b = $_POST['primeiro_b'];
+                         $primeiro_c = $_POST['primeiro_c'];
+ 	                     $primeiro_d = $_POST['primeiro_d'];
+                         $primeiro_e = $_POST['primeiro_e'];
+ 	                     $primeiro_f = $_POST['primeiro_f'];
+                         $primeiro_g = $_POST['primeiro_g'];
+ 	                     $primeiro_h = $_POST['primeiro_h'];
+                         
+                         $segundo_a = $_POST['segundo_a'];
+                         $segundo_b = $_POST['segundo_b'];
+ 	                     $segundo_c = $_POST['segundo_c'];
+                         $segundo_d = $_POST['segundo_d'];
+ 	                     $segundo_e = $_POST['segundo_e'];
+                         
+                         $terceiro_a = $_POST['terceiro_a'];
+                         $terceiro_b = $_POST['terceiro_b'];
+ 	                     $terceiro_c = $_POST['terceiro_c'];
+                         $terceiro_d = $_POST['terceiro_d'];
+ 	                     $terceiro_e = $_POST['terceiro_e'];
+                         
+                         $quarto_a = $_POST['quarto_a'];
+ 	                     $quarto_b = $_POST['quarto_b'];
+                         $quarto_c = $_POST['quarto_c'];
+ 	                     $quarto_d = $_POST['quarto_d'];
+                         
+                         $quinto_a = $_POST['quinto_a'];
+ 	                     $quinto_b = $_POST['quinto_a'];
+                         $quinto_c = $_POST['quinto_a'];
+ 	                     $quinto_d = $_POST['quinto_a'];
+                         $quinto_e = $_POST['quinto_a'];
+ 	                     $quinto_f = $_POST['quinto_a'];
+                         $quinto_g = $_POST['quinto_a'];
+ 	                     $quinto_h = $_POST['quinto_a'];
+                         $cores = $_POST['cores'];
+                         
+                         $sexto_a = $_POST['sexto_a'];
+ 	                     $sexto_b = $_POST['sexto_b'];
+                         $sexto_c = $_POST['sexto_c'];
+ 	                     $sexto_d = $_POST['sexto_d'];
+                         $sexto_e = $_POST['sexto_e'];
+ 	                     $sexto_f = $_POST['sexto_f'];
+	                     //====================================================
+ 
+	                     //Monta o Corpo da Mensagem
+	                     //====================================================
+	                     $email_conteudo = "Nome = $nome \n"; 
+	                     $email_conteudo .= "Email = $email \n"; 
+	                     $email_conteudo .=  "Telefone = $telefone \n";
+	                     $email_conteudo .=  "Ramo de Atividades = $ramo \n";
+                         
+                         $email_conteudo .= "Descreva o negócio/produto/empresa como se fosse uma pessoa. É sério? Jovem? Confiável? ...? Justifique. = $primeiro_a \n"; 
+	                     $email_conteudo .=  "Quais são os pontos fortes e fracos do negócio/produto/empresa? Por quê? = $primeiro_b \n";
+	                     $email_conteudo .=  "Qual a mensagem que melhor descreve o conteúdo/atuação do negócio/produto/empresa? = $primeiro_c \n";
+                         $email_conteudo .= "É necessário obter dados dos visitantes? O quê é preciso saber? Por quê? = $primeiro_d \n"; 
+	                     $email_conteudo .=  "O que o site irá oferecer ao seu público-alvo? = $primeiro_e \n";
+	                     $email_conteudo .=  "O que os visitantes devem fazer no site? = $primeiro_f \n";
+                         $email_conteudo .= "Qual o conhecimento que os visitantes do site tem de internet/web? E o conhecimento técnico? = $primeiro_g \n"; 
+	                     $email_conteudo .=  "Qual a "capacidade técnica" de acesso de seus usuários (navegador, velocidade de acesso, tempo de acesso diário, etc)? = $primeiro_h \n";
+                         
+                         $email_conteudo .= "Qual publico alvo. = $segundo_a \n"; 
+	                     $email_conteudo .=  "Existe um publico alvo secundário ? = $segundo_b \n";
+	                     $email_conteudo .=  "Qual interesse desse público alvo. = $segundo_c \n";
+                         $email_conteudo .= "Qual a necessidade desse público alvo. = $segundo_d \n"; 
+	                     $email_conteudo .=  "Qual a média de idade desse publico alvo. = $segundo_e \n";
+                         
+                         $email_conteudo .= "Quais são os principais objetivos do site? Informar? Vender? Dar suporte? ...? = $terceiro_a \n"; 
+	                     $email_conteudo .=  "Que tipo de site ele é? Puramente promocional? Coletor de Informações? Uma publicação? Exposição de marca ou produto? = $terceiro_b \n";
+	                     $email_conteudo .=  "Quais são as mensagens mais importantes que o site deve passar aos visitantes? = $terceiro_c \n";
+                         $email_conteudo .= "Quais são os planos para promover o site? = $terceiro_d \n"; 
+	                     $email_conteudo .=  "Quais redes sociais seu negócio/produto/empresa tem hoje ? = $terceiro_e \n";
+                         
+                         $email_conteudo .= "Que informação do site mudará? Com que freqüência e com que abrangência? = $quarto_a \n"; 
+	                     $email_conteudo .=  "Quem se beneficia com as atualizações? = $quarto_b \n";
+                         $email_conteudo .= "Qual são as seções e funcionalidades que precisam existir? = $quarto_c \n"; 
+	                     $email_conteudo .=  "Qual é o "aceite" do site (o que precisa existir para "aceitar" que ele está pronto)? = $quarto_d \n";
+                         
+                         $email_conteudo .= "Tem em mente alguma aparência para o web site? = $quinto_a \n"; 
+	                     $email_conteudo .=  "Existem padrões existentes, como logotipos e cores, que devem estar presentes? Quais ?
+                                              = $quinto_b \n";
+                         $email_conteudo .= "O site parte de um site maior ou grupo de sites com padrões de design que precisam ser correspondidos? Quais ? = $quinto_c \n"; 
+	                     $email_conteudo .=  "Cite 03 sites da web que você gosta? = $quinto_d \n";
+                         $email_conteudo .= "Cite o que você gosta dos sites que citou anteriormente. = $quinto_e \n"; 
+	                     $email_conteudo .=  "Cite 03 sites da web que você NÃO gosta? = $quinto_f \n";
+                         $email_conteudo .= "Cite o que você NÃO gosta dos sites que citou anteriormente. = $quinto_g \n"; 
+	                     $email_conteudo .=  "Qual a "imagem" que você precisa transmitir para o usuário ? = $quinto_h \n";
+                         $email_conteudo .= "Cores quentes ou frias ? = $cores \n";
+                         
+                         $email_conteudo .= "Cite dois ou tres concorrentes maiores que você. = $sexto_a \n"; 
+	                     $email_conteudo .=  "Cite dois ou tres concorrentes menores que você. = $sexto_b \n";
+                         $email_conteudo .= "Quais são suas vantagens sobre esses concorrentes. = $sexto_c \n"; 
+	                     $email_conteudo .=  "Quais são seus desvantagens sob esses concorrentes. = $sexto_d \n";
+                         $email_conteudo .= "O que você precisa mostrar para ganhar vantagem em relação aos concorrentes. = $sexto_e \n"; 
+	                     $email_conteudo .=  "O que você não pode mostrar em relação aos concorrente. = $sexto_f \n";
+	       
+ 	                     //====================================================
+ 
+	                     //Seta os Headers (Alerar somente caso necessario)
+	                     //====================================================
+	                     $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Subject: $email_assunto","Return-Path:  $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
+	                     //====================================================
+ 
+ 
+	                     //Enviando o email
+	                     //====================================================
+	                     if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){
+		                     
+                             echo "<script>alert('Foi enviado com sucesso $nome, em breve lhe responderemos ... Obrigado !');</script>";
+
+	                    }
+  	                    else{
+		                     echo "</b>Falha no envio do E-Mail!</b>";
+	                    }
+	                     //====================================================
+                        }	
+                    ?>
